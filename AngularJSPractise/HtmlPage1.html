@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/Script.js"></script>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body ng-controller="myController">
+    <div >
+        First Name: {{ employee.firstName }}
+    </div>
+    <div>
+        Last Name: {{ employee.lastName }}
+    </div>
+    <div>
+        Gender: {{ employee.gender }}
+    </div>
+    <div>
+        <img ng-src="{{ employee.picture }}"
+             alt="{{ employee.firstName + ' ' + employee.lastName }}"
+             style="height:10%; width:10%" />
+    </div>
+    <div>
+        {{message}}
+        <br />
+        <input type="text" ng-model="message" />
+        <br />
+        <input type="text" ng-model="greeting" />
+        <br />
+        {{greeting}}
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td>First Name</td>
+                <td>
+                    <input type="text" ng-model="employee.firstName" />
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>
+                    <input type="text" ng-model="employee.lastName" />
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="text" ng-model="employee.gender" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <table>
+            <tr>
+                <td>First Name</td>
+                <td>
+                    {{employee.firstName}}
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>
+                    {{employee.lastName}}
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    {{employee.gender}}
+                </td>
+            </tr>
+        </table>
+    </div>
+        
+
+</body>
+</html>
